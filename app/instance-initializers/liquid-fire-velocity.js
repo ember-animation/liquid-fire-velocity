@@ -1,13 +1,9 @@
-// This initializer exists only to make sure that the following
-// imports happen before the app boots.
-import "liquid-fire/router-dsl-ext";
-import { registerKeywords } from "liquid-fire/ember-internals";
-registerKeywords();
+// supply an animate function to liquid-fire-core
 
 export default {
   name: 'liquid-fire-velocity',
-  after: 'liquid-fire',
-  initialize: function() {
 
+  initialize: function(registry) {
+    registry.lookup('service:liquid-fire-transitions').animate = Ember.$.Velocity;
   }
 };
