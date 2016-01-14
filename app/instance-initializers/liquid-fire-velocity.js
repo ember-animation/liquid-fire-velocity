@@ -5,6 +5,9 @@ import { registerKeywords } from "liquid-fire/ember-internals";
 registerKeywords();
 
 export default {
-  name: 'liquid-fire',
-  initialize: function() {}
+  name: 'liquid-fire-velocity',
+  after: 'liquid-fire',
+  initialize: function() {
+
+  }
 };
