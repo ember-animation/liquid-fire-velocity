@@ -48,7 +48,10 @@ module.exports = {
 
     registry.add('htmlbars-ast-plugin', {
       name: "transform-liquid-with-as-to-hash",
-      plugin: TransformLiquidWithAsToHash
+      plugin: TransformLiquidWithAsToHash,
+      baseDir: function() {
+        return __dirname;
+      }
     });
   }
 };
